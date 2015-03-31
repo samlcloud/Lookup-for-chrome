@@ -128,6 +128,14 @@
 			showPopup("http://www.oxfordlearnersdictionaries.com/search/english/direct/?q="+keyword, keyword);
 		}
 	}
+
+	// for Oxford Advanced Learners Dictionary - American English
+	function lookupOALDAMER(info, tab) {
+		var keyword = validateString(info.selectionText);
+		if (keyword != false) {
+			showPopup("http://www.oxfordlearnersdictionaries.com/search/american_english/direct/?q="+keyword, keyword);
+		}
+	}
 	
 	// for Investopedia
 	function lookupInvestopedia(info, tab) {
@@ -264,7 +272,7 @@
                 chrome.tabs.executeScript(null, {code: "var a='"+JSON.stringify(arr)+"';"}, function(){
                     chrome.tabs.executeScript(null, {file:"js/jquery.min.js"}, function(){
                         chrome.tabs.executeScript(null, {file:"js/jquery-ui-1.10.3.min.js"}, function(){
-                            chrome.tabs.executeScript(null, {file:"js/inject.js"});
+                            chrome.tabs.executeScript(null, {file:"js/inject.min.js"});
                         });
                     });
                 });
