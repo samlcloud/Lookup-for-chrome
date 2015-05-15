@@ -143,6 +143,11 @@ var msg = '<span></span>'; // if any, once 'Save' clicked
 			title: "Macmillan Dictionary - American",
 			url: "http://www.macmillandictionary.com/dictionary/american/"
 		},
+		{ // 27
+			func: "iCIBA",
+			title: "iCIBA English-Chinese Dictionary",
+			url: "http://www.iciba.com/"
+		}
 	];
 
 	// function called when save button is pressed, to
@@ -196,7 +201,8 @@ var msg = '<span></span>'; // if any, once 'Save' clicked
 			var dics = enabledDics.split(','); // private
 		} else {
 			// for the first time, after installation
-			var dics = [0,1,2,3,4,5,6,7,8,9,11,12,13,15,16,17,18,19,20,21,22,23,24,26];
+			//var dics = [0,1,2,3,4,5,6,7,8,9,11,12,13,15,16,17,18,19,20,21,22,23,24,26];
+			var dics = [8,11,6,27];
 		}
 		if (flag == "menu") {
 			var retVal = [];
