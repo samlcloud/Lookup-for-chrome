@@ -1,3 +1,2 @@
 0.0.1
 	- added iCIBA (Kingsoft English-Chinese) into the dictionary list
-

@@ -147,7 +147,18 @@ var dicts = [
     func: "iCIBA",
     title: "iCIBA English-Chinese Dictionary",
     url: "http://www.iciba.com/"
+  },
+  { // 28
+    func: "GoogleTranslateENtoCN",
+    title: "Google Translate: English to Chinese",
+    url: "https://translate.google.com/?hl=en&tab=eT#en/zh-CN/"
+  },
+  { // 29
+    func: "GoogleTranslateCNtoEN",
+    title: "Google Translate: Chinese to English",
+    url: "https://translate.google.com/?hl=en&tab=eT#zh-CN/en/"
   }
+
 ];
 
 // function called when save button is pressed, to
@@ -202,7 +213,7 @@ function getEnabledDicts(flag) {
   } else {
     // for the first time, after installation
     //var dics = [0,1,2,3,4,5,6,7,8,9,11,12,13,15,16,17,18,19,20,21,22,23,24,26];
-    var dics = [8, 11, 6, 27];
+    var dics = [8, 27, 11, 6, 28, 29];
   }
   if (flag == "menu") {
     var retVal = [];

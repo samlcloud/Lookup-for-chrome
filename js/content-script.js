@@ -271,6 +271,22 @@ function lookupiCIBA(info, tab) {
   }
 }
 
+// for ICIBA English-Chinese dictionary
+function lookupiCIBA(info, tab) {
+  var keyword = validateString(info.selectionText);
+  if (keyword != false) {
+    showPopup("http://www.iciba.com/" + keyword, keyword);
+  }
+}
+
+// for Google Translate English to Chinese
+function lookupGoogleTranslateENtoCN(info, tab) {
+  var keyword = validateString(info.selectionText);
+  if (keyword != false) {
+    showPopup("https://translate.google.com/?hl=en&tab=eT#en/zh-CN/" + keyword, keyword);
+  }
+}
+
 // shows the popup with selectd dictionary URL.
 // Inject style and scripts.
 function showPopup(url, keyword) {
