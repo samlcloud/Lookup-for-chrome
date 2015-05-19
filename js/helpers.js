@@ -9,49 +9,49 @@ var msg = '<span></span>'; // if any, once 'Save' clicked
 // All dictionaries in JSON.
 var dicts = [
   { // 0
+    func: "OALD",
+    title: "Oxford Advanced Learners",
+    url: "http://www.oxfordlearnersdictionaries.com/search/english/direct/?q="
+  },
+  { // 1
     func: "Cald",
     title: "Cambridge Advanced Learners",
     url: "http://dictionary.cambridge.org/search/british/direct/?q="
   },
-  { // 1
+  { // 2
     func: "Ldoce",
     title: "Longman Contemporary English",
     url: "http://www.ldoceonline.com/search/?q="
   },
-  { // 2
+  { // 3
     func: "FreeDict",
     title: "The Free Dictionary",
     url: "http://www.thefreedictionary.com/"
   },
-  { // 3
+  { // 4
     func: "UrbanDict",
     title: "Urban Dictionary",
     url: "http://www.urbandictionary.com/define.php?term="
   },
-  { // 4
+  { // 5
     func: "MerriamWebster",
     title: "Merriam Webster Dictionary",
     url: "http://www.merriam-webster.com/thesaurus/"
   },
-  { // 5
+  { // 6
     func: "Wiktionary",
     title: "Wiktionary",
     url: "http://en.wiktionary.org/wiki/"
   },
-  { // 6
+  { // 7
     func: "Thesaurus",
     title: "Thesaurus.com",
     url: "http://thesaurus.com/browse/"
   },
-  { // 7
+  { // 8
     func: "MerriamWebsterT",
     title: "Merriam Webster Thesaurus",
     url: "http://www.merriam-webster.com/thesaurus/"
-  },
-  { // 8
-    func: "OALD",
-    title: "Oxford Advanced Learners",
-    url: "http://www.oxfordlearnersdictionaries.com/search/english/direct/?q="
   },
   { // 9
     func: "Definition",
@@ -149,14 +149,14 @@ var dicts = [
     url: "http://www.iciba.com/"
   },
   { // 28
-    func: "GoogleTranslateENtoCN",
-    title: "Google Translate: English to Chinese",
-    url: "https://translate.google.com/?hl=en&tab=eT#en/zh-CN/"
+    func: "GoogleTranslateToCN",
+    title: "Google Translate: to Chinese",
+    url: "https://translate.google.com/?hl=en&tab=eT#auto/zh-CN/"
   },
   { // 29
-    func: "GoogleTranslateCNtoEN",
-    title: "Google Translate: Chinese to English",
-    url: "https://translate.google.com/?hl=en&tab=eT#zh-CN/en/"
+    func: "GoogleTranslateToEN",
+    title: "Google Translate: to English",
+    url: "https://translate.google.com/?hl=en&tab=eT#auto/en/"
   }
 
 ];
@@ -213,7 +213,7 @@ function getEnabledDicts(flag) {
   } else {
     // for the first time, after installation
     //var dics = [0,1,2,3,4,5,6,7,8,9,11,12,13,15,16,17,18,19,20,21,22,23,24,26];
-    var dics = [8, 27, 11, 6, 28, 29];
+    var dics = [0, 7, 11, 27, 28, 29];
   }
   if (flag == "menu") {
     var retVal = [];

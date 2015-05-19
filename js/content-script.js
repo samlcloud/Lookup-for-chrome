@@ -271,21 +271,22 @@ function lookupiCIBA(info, tab) {
   }
 }
 
-// for ICIBA English-Chinese dictionary
-function lookupiCIBA(info, tab) {
+// for Google Translate Detected Language to Chinese
+function lookupGoogleTranslateToCN(info, tab) {
   var keyword = validateString(info.selectionText);
   if (keyword != false) {
-    showPopup("http://www.iciba.com/" + keyword, keyword);
+    showPopup("https://translate.google.com/?hl=en&tab=eT#auto/zh-CN/" + keyword, keyword);
   }
 }
 
-// for Google Translate English to Chinese
-function lookupGoogleTranslateENtoCN(info, tab) {
+// for Google Translate Detected Language to English
+function lookupGoogleTranslateToEN(info, tab) {
   var keyword = validateString(info.selectionText);
   if (keyword != false) {
-    showPopup("https://translate.google.com/?hl=en&tab=eT#en/zh-CN/" + keyword, keyword);
+    showPopup("https://translate.google.com/?hl=en&tab=eT#auto/en/" + keyword, keyword);
   }
 }
+
 
 // shows the popup with selectd dictionary URL.
 // Inject style and scripts.
