@@ -1,42 +1,33 @@
 {
-	"name": "Lookup Definitions - Dictionary & Thesaurus",
-	"version": "1.4.0",
-	"manifest_version": 2,
-	
-	"background": { "page" : "/html/background.html" },
-	"description": "Lookup definitions from free online dictionary and thesaurus sites.",
-	"icons": {
-	  "48": "/images/dic_icon.png"
-	},
-	"minimum_chrome_version": "8",
-	"permissions": [
-		"contextMenus",
-		"tabs",
-		"http://dictionary.cambridge.org/",
-		"http://www.ldoceonline.com/",
-		"http://www.thefreedictionary.com/",
-		"http://www.urbandictionary.com/",
-		"http://www.merriam-webster.com/",
-		"http://en.wiktionary.org/wiki/",
-		"http://thesaurus.com/",
-		"http://www.oxfordlearnersdictionaries.com/",
-		"http://www.google.com/",
-		"http://www.investopedia.com/",
-		"http://dictionary.reference.com/",
-		"http://www.macmillandictionary.com/",
-		"http://accountingdictionary.org/",
-		"http://dictionary.reverso.net/",
-		"http://www.collinsdictionary.com/",
-		"http://www.linguee.es/",
-		"http://www.learnersdictionary.com/",
-		"http://www.oxfordlearnersdictionaries.com/"
-	],
-	"options_page": "/html/options.html",
-	"update_url": "http://clients2.google.com/service/update2/crx",
-	
-	"browser_action": {
-		"default_icon": "images/dic_icon.png",
-		"default_title": "Lookup extension",
-		"default_popup": "/html/options.html"
-	}
+  "manifest_version": 2,
+  "name": "Online definition and translation",
+  "version": "0.0.1",
+
+  "description": "Online definition and translation",
+  "icons": {
+    "128": "/images/dict_128.png"
+  },
+
+  "background": {
+    "page": "/html/background.html"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "19": "images/dict_19.png",
+      "38": "images/dict_38.png"
+    },
+    "default_popup": "/html/options.html"
+  },
+
+  "options_page": "/html/options.html",
+
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "minimum_chrome_version": "8"
 }
