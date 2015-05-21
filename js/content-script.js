@@ -15,10 +15,24 @@ function validate(key, value) {
 function validateString(string) {
   keywd = JSON.parse(JSON.stringify(string, validate));
   if (keywd.length > 45) {
-    alert("Whooops...\nSelection can\'t exceed 45 characters.\n\nThe longest word in English is only 45 characters long.\n\'pneumonoultramicroscopicsilicovolcanoconiosis\'");
+    alert("Whooops...\nSelection can\'t exceed 45 characters." +
+      "\n\nThe longest word in English is only 45 characters long." +
+      "\n\'pneumonoultramicroscopicsilicovolcanoconiosis\'");
     exit;
   }
   return keywd;
+}
+
+// filter keywords, or phase or paragraph, this can be object
+function validateStringForTranslation(string) {
+  keyString = JSON.parse(JSON.stringify(string, validate));
+  if (keyString.length > 999) {
+    alert("Whooops...\nSelection can\'t exceed 999 characters." +
+      "\n\nThe format is not well rendered if the selected text is too long." +
+      "\n\'pneumonoultramicroscopicsilicovolcanoconiosis ...\'");
+    exit;
+  }
+  return keyString;
 }
 
 // get tab id of lookup tab
@@ -273,17 +287,17 @@ function lookupiCIBA(info, tab) {
 
 // for Google Translate Detected Language to Chinese
 function lookupGoogleTranslateToCN(info, tab) {
-  var keyword = validateString(info.selectionText);
-  if (keyword != false) {
-    showPopup("https://translate.google.com/?hl=en&tab=eT#auto/zh-CN/" + keyword, keyword);
+  var keyString = validateStringForTranslation(info.selectionText);
+  if (keyString != false) {
+    showPopup("https://translate.google.com/?hl=en&tab=eT#auto/zh-CN/" + keyString, keyString);
   }
 }
 
 // for Google Translate Detected Language to English
 function lookupGoogleTranslateToEN(info, tab) {
-  var keyword = validateString(info.selectionText);
-  if (keyword != false) {
-    showPopup("https://translate.google.com/?hl=en&tab=eT#auto/en/" + keyword, keyword);
+  var keyString = validateStringForTranslation(info.selectionText);
+  if (keyString != false) {
+    showPopup("https://translate.google.com/?hl=en&tab=eT#auto/en/" + keyString, keyString);
   }
 }
 
@@ -319,6 +333,7 @@ function showPopup(url, keyword) {
 var url = "";
 var tabId = null;
 var keywd = null;
+var keyString = null;
 var selCxt = "selection";
 var pageCxt = "page";
 var title = "";
